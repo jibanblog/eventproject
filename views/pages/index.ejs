@@ -1,0 +1,46 @@
+<% include ../partial/header %>
+
+<div class="">
+ <div class="col s12">
+    <a href="/event/add" class="btn btn-success btn-lg"> Add a new Event </a>
+  </div>
+  </div>
+
+  <br />
+
+  <div class="=">
+  <div class="col s12">
+  <% if (items.length > 0) { %>
+  <table class="table">
+  <thead>
+  <tr>
+  <th style="width:1%;text-align:center">ID</th>
+  <th style="width:20%;text-align:center">E_NAME</th>
+  <th style="width:25%;text-align:center">E_START_DATE</th>
+  <th style="width:25%;text-align:center">E_END_DATE</th>
+  <th style="width:25%;text-align:center">ACTIONS</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% items.forEach(function(item, index){ %>
+  <tr>
+  <td style="width:1%;text-align:center"><%= index + 1 %></td>
+  <td style="width:20%;text-align:center"><%= item.e_name %></td>
+  <td style="width:25%;text-align:center"><%= item.e_start_date %></td>
+  <td style="width:25%;text-align:center"><%= item.e_end_date %></td>
+  <td colspan="2" style="width:25%;text-align:center">
+  <a href="event/edit/<%= item.e_id %>" class="btn btn-success">Edit</a>
+  <a href="event/delete/<%= item.e_id %>" clas="btn btn-danger">Delete</a>
+  </td>
+  </tr>
+  <% }); %>
+  </tbody>
+  </table>
+  <% } else { %>
+  <p><strong> There are no records available </strong></p>
+   <% } %>
+  </div>
+  </div>  
+
+
+<% include ../partial/footer %>

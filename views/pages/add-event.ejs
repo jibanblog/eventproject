@@ -1,0 +1,43 @@
+
+<% include ../partial/header %>
+
+<h1> Add New Event: </h1> <br /> <br /><br />
+
+<form action="http://localhost:4000/event/add" method="post" class="col s12">
+<div class="form-group row">
+<label for="e_id" class="col-2 col-form-label">E_ID</label>
+<div class="col-10">
+<input type="number" name="e_id" value="" class="form-control" />
+</div>
+</div> <br /><br />
+<div class="form-group row">
+<label for="e_name" class="col-2 col-form-label">E_NAME</label>
+<div class="col-10">
+<input type="text" name="e_name" value="" class="form-control" />
+</div>
+</div> <br /><br />
+<div class="form-group row">
+<label for="e_start_date" class="col-2 col-form-label">E_START_DATE</label>
+<div class="col-10">
+<input type="date" name="e_start_date" value="" class="form-control" />
+</div>
+</div> <br /><br />
+<div class="form-group row">
+<label for="e_end_date" class="col-2 col-form-label">E_END_DATE</label>
+<div class="col-10">
+<input type="date" name="e_end_date" value="" class="form-control" />
+</div>
+</div><br />
+<div class="form-group row">
+<label for="e_click" class="col-2 col-form-label" style="color:#ffffff">Click here to submit</label>
+<div class="col-10">
+<input type="submit" name="e_click" value="Save Event" class="btn btn-pimary btn-lg" />
+</div>
+</div>
+
+</form>
+
+
+
+
+<% include ../partial/footer %>
